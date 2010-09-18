@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Command line test" failures="0" tests="4" time="0.039" errors="0">
+  <properties/>
+  <testcase name="testGetAndSetCountry" time="0.006" classname="com.gardin.piazza.domain.UserTests"/>
+  <testcase name="testGetAndSetEmail" time="0.0" classname="com.gardin.piazza.domain.UserTests"/>
+  <testcase name="testGetAndSetFirstName" time="0.001" classname="com.gardin.piazza.domain.UserTests"/>
+  <testcase name="testGetAndSetID" time="0.0" classname="com.gardin.piazza.domain.UserTests"/>
+</testsuite>

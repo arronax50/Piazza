@@ -1,0 +1,20 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="39" started-at="2010-09-18T02:40:04Z" finished-at="2010-09-18T02:40:04Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="39" started-at="2010-09-18T02:40:04Z" finished-at="2010-09-18T02:40:04Z">
+      <class name="com.gardin.piazza.domain.UserTests">
+        <test-method status="PASS" signature="testGetAndSetCountry()" name="testGetAndSetCountry" duration-ms="6" started-at="2010-09-18T02:40:04Z" finished-at="2010-09-18T02:40:04Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetAndSetEmail()" name="testGetAndSetEmail" duration-ms="0" started-at="2010-09-18T02:40:04Z" finished-at="2010-09-18T02:40:04Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetAndSetFirstName()" name="testGetAndSetFirstName" duration-ms="1" started-at="2010-09-18T02:40:04Z" finished-at="2010-09-18T02:40:04Z">
+        </test-method>
+        <test-method status="PASS" signature="testGetAndSetID()" name="testGetAndSetID" duration-ms="0" started-at="2010-09-18T02:40:04Z" finished-at="2010-09-18T02:40:04Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
