@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Context for Apache Commons DBCP -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!-- DataSource bean -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+        destroy-method="close" primary="true">
+        <property name="driverClassName" value="${database.connection.driver}" />
+        <property name="url" value="${database.connection.url}" />
+        <property name="username" value="${database.connection.username}" />
+        <property name="password" value="${database.connection.password}" />
+
+        <property name="initialSize" value="${database.pool.initialSize}" />
+        <property name="maxIdle" value="${database.pool.maxIdle}" />
+        <property name="maxActive" value="${database.pool.maxActive}" />
+        <property name="maxWait" value="${database.pool.maxWait}" />
+
+        <property name="validationQuery" value="${database.pool.validationQuery}" />
+        <property name="testWhileIdle" value="${database.pool.testWhileIdle}" />
+        <property name="testOnBorrow" value="${database.pool.testOnBorrow}" />
+        <property name="testOnReturn" value="${database.pool.testOnReturn}" />
+        <property name="timeBetweenEvictionRunsMillis"
+            value="${database.pool.timeBetweenEvictionRunsMillis}" />
+        <property name="minEvictableIdleTimeMillis"
+            value="${database.pool.minEvictableIdleTimeMillis}" />
+        <property name="numTestsPerEvictionRun"
+            value="${database.pool.numTestsPerEvictionRun}" />
+        <property name="removeAbandoned" value="${database.pool.removeAbandoned}" />
+        <property name="logAbandoned" value="${database.pool.logAbandoned}" />
+    </bean>
+</beans>

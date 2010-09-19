@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <import resource="properties-context.xml"/>
+    <!-- 1. Imports -->
+    <import resource="classpath*:/properties-context.xml" />
+    <import resource="unit-test-beans.xml" />
+    <import resource="classpath*:/dbcp-context.xml" />
+    <import resource="classpath*:/aop-context.xml" />
+    <import resource="classpath*:/hibernate-context.xml" />
+
+
+<!--     2. Configuration -->
 
 </beans>

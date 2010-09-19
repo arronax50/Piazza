@@ -6,7 +6,7 @@
   <bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
     <property name="locations">
       <list>
-        <value>classpath:${database.properties}</value>
+        <value>classpath*:database.properties</value>
       </list>
     </property>
   </bean>

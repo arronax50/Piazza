@@ -9,40 +9,40 @@ import java.util.List;
  * @author Pierre Gardin
  * 
  * @param <T>
- *            the class of objects manage by this DAO (domain class).
+ *            the class of objects managed by this DAO (domain class).
  * @param <ID>
  *            the class of identifiers for the domain class.
  */
 public interface IDAO<T, ID extends Serializable> {
 
     /**
-     * Delete given object entry from database.
+     * Delete the given object entry from the database.
      * 
      * @param obj
-     *            Object needs to be deleted from the database.
+     *            the Object that needs to be deleted from the database.
      */
-    void delete(T obj);
+    public void delete(T obj);
 
     /**
-     * Get all objects of this domain.
+     * Get all the objects of this domain.
      * 
      * @return object list
      */
-    List<T> getAll();
+    public List<T> getAll();
 
     /**
-     * Get all objects of this domain ordered by id.
+     * Get all the objects of this domain ordered by id.
      * 
      * @return object list
      */
-    List<T> getAllOrderedByID();
+    public List<T> getAllOrderedByID();
 
     /**
      * Get an instance of <code>T</code> corresponding to the given identifier.
      * 
      * @return the matched object
      */
-    T getByID(ID id);
+    public T getByID(ID id);
 
     /**
      * Persist the given object into the database.
@@ -51,7 +51,7 @@ public interface IDAO<T, ID extends Serializable> {
      *            the Object that needs to be persisted
      * @return the newly created object identifier
      */
-    ID save(T obj);
+    public ID save(T obj);
 
     /**
      * Persist the given object into the database or update its state if it is
@@ -60,5 +60,5 @@ public interface IDAO<T, ID extends Serializable> {
      * @param obj
      *            Object that needs to be persisted or updated.
      */
-    void saveOrUpdate(T obj);
+    public void saveOrUpdate(T obj);
 }

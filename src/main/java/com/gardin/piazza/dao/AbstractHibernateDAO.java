@@ -17,6 +17,11 @@ public class AbstractHibernateDAO<T, ID extends Serializable> extends HibernateD
 
     private final Class<T> domainClass;
 
+    
+    public final Class<T> getDomainClass() {
+        return domainClass;
+    }
+
     @Autowired
     private SessionFactory sessionFactory;
 

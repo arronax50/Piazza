@@ -1,5 +1,8 @@
 package com.gardin.piazza.dao;
 
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
+
 import com.gardin.piazza.domain.User;
 
 /**
@@ -11,6 +14,13 @@ public class HibernateUserDAO extends AbstractHibernateDAO<User, Integer> implem
 
     public HibernateUserDAO() {
         super(User.class);
+    }
+
+    @Override
+    public User getByEmail(String userEmail) {
+        Criteria criteria = getSession().createCriteria(User.class);
+        criteria.add(Restrictions.eq("email", userEmail));
+        return (User) criteria.uniqueResult();
     }
 
 }
