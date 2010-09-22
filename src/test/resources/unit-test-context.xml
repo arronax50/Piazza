@@ -6,7 +6,7 @@
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
     <!-- 1. Imports -->
-    <import resource="classpath*:/properties-context.xml" />
+    <import resource="classpath*:/properties-unit-test-context.xml" />
     <import resource="unit-test-beans.xml" />
     <import resource="classpath*:/dbcp-context.xml" />
     <import resource="classpath*:/aop-context.xml" />

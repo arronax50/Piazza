@@ -9,7 +9,6 @@ import com.gardin.piazza.domain.User;
  * 
  * @author Pierre Gardin
  */
-@Repository(value = "userDAO")
 public interface IUserDAO extends IDAO<User, Integer> {
 
     /**

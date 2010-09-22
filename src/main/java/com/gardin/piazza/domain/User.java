@@ -1,8 +1,11 @@
 package com.gardin.piazza.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
-
 
 /**
  * Represents a user that can have several roles: admin, author, reviewer,
@@ -11,21 +14,29 @@ import javax.persistence.Table;
  * @author Pierre Gardin
  */
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public final class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(name = "first_name", nullable = true)
     private String firstName;
 
+    @Column(name = "surname", nullable = true)
     private String surname;
 
+    @Column(name = "email", nullable = false)
     private String email;
 
+    @Column(name = "password", nullable = false)
     private String password;
 
+    @Column(name = "institution", nullable = false)
     private String institution;
 
+    @Column(name = "country", nullable = false)
     private String country;
 
     public String getCountry() {

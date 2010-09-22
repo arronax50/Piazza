@@ -1,5 +1,7 @@
 package com.gardin.piazza.dao;
 
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -25,6 +27,7 @@ public class HibernateUserDAOTests extends AbstractDBTest {
     private static final String USER_SURNAME = "Legrand";
 
     @Test
+    @Transactional
     public void testSaveAndGetUser() {
         User user = new User();
         user.setCountry(USER_COUNTRY);
@@ -46,7 +49,8 @@ public class HibernateUserDAOTests extends AbstractDBTest {
     }
 
     @Test
-    public void testSaveOrUpdateUser(Integer id) {
+    @Transactional
+    public void testSaveOrUpdateUser() {
         Assert.assertEquals(userDAO.getAll().size(), 0);
 
         User user = new User();

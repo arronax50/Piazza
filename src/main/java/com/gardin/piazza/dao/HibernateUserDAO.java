@@ -2,6 +2,7 @@ package com.gardin.piazza.dao;
 
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 
 import com.gardin.piazza.domain.User;
 
@@ -10,6 +11,7 @@ import com.gardin.piazza.domain.User;
  * 
  * @author Pierre Gardin
  */
+@Repository(value = "userDAO")
 public class HibernateUserDAO extends AbstractHibernateDAO<User, Integer> implements IUserDAO {
 
     public HibernateUserDAO() {
