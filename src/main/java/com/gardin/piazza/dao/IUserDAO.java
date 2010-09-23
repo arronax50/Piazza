@@ -1,7 +1,5 @@
 package com.gardin.piazza.dao;
 
-import org.springframework.stereotype.Repository;
-
 import com.gardin.piazza.domain.User;
 
 /**

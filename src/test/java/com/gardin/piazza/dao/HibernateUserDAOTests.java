@@ -1,6 +1,5 @@
 package com.gardin.piazza.dao;
 
-import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.testng.Assert;

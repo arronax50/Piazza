@@ -18,6 +18,6 @@ There is no installer yet, however it will use Maven as a build tool.
 
 ## LICENSE
 
-ThinkUp's source code is licensed under the
+Piazza's source code is licensed under the
 [GNU General Public License version 3](http://www.gnu.org/licenses/gpl.html),
 which is included with the source code.
