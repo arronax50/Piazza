@@ -12,6 +12,13 @@ import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
+/**
+ * Abstract class for all DAO's that use Hibernate behind-the-scenes.
+ * @author Pierre Gardin
+ *
+ * @param <T> the domain class
+ * @param <ID> the identifier class (implements {@link Serializable})
+ */
 public class AbstractHibernateDAO<T, ID extends Serializable> extends HibernateDaoSupport implements
         IDAO<T, ID> {
 

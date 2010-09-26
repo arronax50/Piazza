@@ -7,7 +7,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
+import com.gardin.piazza.dao.IMetaReviewerDAO;
 import com.gardin.piazza.dao.IUserDAO;
+import com.gardin.piazza.domain.users.User;
 
 
 /**
@@ -21,6 +23,8 @@ import com.gardin.piazza.dao.IUserDAO;
 public abstract class AbstractDBTest extends AbstractTransactionalTestNGSpringContextTests {
 
     @Autowired
-    protected IUserDAO userDAO;
-
+    protected IUserDAO<User> userDAO;
+    
+    @Autowired
+    protected IMetaReviewerDAO metaReviewerDAO;
 }

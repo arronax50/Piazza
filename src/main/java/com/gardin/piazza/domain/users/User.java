@@ -1,10 +1,14 @@
-package com.gardin.piazza.domain;
+package com.gardin.piazza.domain.users;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -15,7 +19,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "user")
-public final class User {
+@Inheritance(strategy = InheritanceType.JOINED)
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -38,6 +43,10 @@ public final class User {
 
     @Column(name = "country", nullable = false)
     private String country;
+
+    @ManyToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
 
     public String getCountry() {
         return country;
@@ -93,5 +102,13 @@ public final class User {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Address getAddress() {
+        return address;
     }
 }

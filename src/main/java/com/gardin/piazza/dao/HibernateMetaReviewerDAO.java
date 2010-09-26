@@ -4,6 +4,7 @@ import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import com.gardin.piazza.domain.users.MetaReviewer;
 import com.gardin.piazza.domain.users.User;
 
 /**
@@ -11,18 +12,18 @@ import com.gardin.piazza.domain.users.User;
  * 
  * @author Pierre Gardin
  */
-@Repository(value = "userDAO")
-public class HibernateUserDAO extends AbstractHibernateDAO<User, Integer> implements IUserDAO<User> {
+@Repository(value = "metaReviewerDAO")
+public class HibernateMetaReviewerDAO extends AbstractHibernateDAO<MetaReviewer, Integer>  implements IMetaReviewerDAO {
 
-    public HibernateUserDAO() {
-        super(User.class);
+    public HibernateMetaReviewerDAO() {
+        super(MetaReviewer.class);
     }
 
     @Override
-    public User getByEmail(String userEmail) {
+    public MetaReviewer getByEmail(String userEmail) {
         Criteria criteria = getSession().createCriteria(User.class);
         criteria.add(Restrictions.eq("email", userEmail));
-        return (User) criteria.uniqueResult();
+        return (MetaReviewer) criteria.uniqueResult();
     }
 
 }
