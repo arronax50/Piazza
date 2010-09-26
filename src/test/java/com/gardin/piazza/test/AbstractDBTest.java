@@ -7,8 +7,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
-import com.gardin.piazza.dao.IMetaReviewerDAO;
-import com.gardin.piazza.dao.IUserDAO;
+import com.gardin.piazza.dao.users.IMetaReviewerDAO;
+import com.gardin.piazza.dao.users.IUserDAO;
 import com.gardin.piazza.domain.users.User;
 
 

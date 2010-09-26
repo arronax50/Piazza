@@ -1,9 +1,10 @@
-package com.gardin.piazza.dao;
+package com.gardin.piazza.dao.users;
 
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import com.gardin.piazza.dao.AbstractHibernateDAO;
 import com.gardin.piazza.domain.users.MetaReviewer;
 import com.gardin.piazza.domain.users.User;
 

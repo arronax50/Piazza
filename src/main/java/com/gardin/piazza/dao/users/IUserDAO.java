@@ -1,5 +1,6 @@
-package com.gardin.piazza.dao;
+package com.gardin.piazza.dao.users;
 
+import com.gardin.piazza.dao.IDAO;
 import com.gardin.piazza.domain.users.User;
 
 /**
