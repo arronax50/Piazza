@@ -1,4 +1,4 @@
-package com.gardin.piazza.dao;
+package com.gardin.piazza.dao.users;
 
 import java.util.HashSet;
 import java.util.Set;

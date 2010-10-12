@@ -1,4 +1,4 @@
-package com.gardin.piazza.dao;
+package com.gardin.piazza.dao.users;
 
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
