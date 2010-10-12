@@ -22,7 +22,7 @@ public class Attachment {
     @Column(name = "content")
     private String extension;
 
-    @Column(name = "content")
+    @Column(name = "file")
     private Blob file;
 
     @Id

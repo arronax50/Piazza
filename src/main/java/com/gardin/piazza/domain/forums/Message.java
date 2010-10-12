@@ -1,4 +1,4 @@
-package com.gardin.piazza.domain.forum;
+package com.gardin.piazza.domain.forums;
 
 import java.sql.Blob;
 import java.util.Date;
@@ -11,7 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.gardin.piazza.domain.users.User;
@@ -47,9 +46,13 @@ public class Message {
     @Column(name = "position")
     private int position;
 
-    @Column(name = "precedingMessage")
-    @OneToOne()
-    private Message precedingMessage;
+    /**
+     * The Message this Message is replying to. Can be null and several Messages
+     * can answer a single Message.
+     */
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @JoinColumn(name = "replied_message", nullable = true)
+    private Message repliedMessage;
 
     public User getAuthor() {
         return author;
@@ -75,8 +78,8 @@ public class Message {
         return position;
     }
 
-    public Message getPrecedingMessage() {
-        return precedingMessage;
+    public Message getRepliedMessage() {
+        return repliedMessage;
     }
 
     public void setAuthor(User author) {
@@ -103,7 +106,8 @@ public class Message {
         this.position = position;
     }
 
-    public void setPrecedingMessage(Message precedingMessage) {
-        this.precedingMessage = precedingMessage;
+    public void setRepliedMessage(Message repliedMessage) {
+        this.repliedMessage = repliedMessage;
     }
+
 }

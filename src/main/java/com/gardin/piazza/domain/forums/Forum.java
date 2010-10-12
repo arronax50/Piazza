@@ -1,4 +1,4 @@
-package com.gardin.piazza.domain.forum;
+package com.gardin.piazza.domain.forums;
 
 import java.util.Date;
 

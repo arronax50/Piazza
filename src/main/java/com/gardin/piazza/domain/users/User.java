@@ -22,6 +22,7 @@ import javax.persistence.Table;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
 
+    // TODO bi-directional relation with Conference (User is registered with the Conference) + email is verified
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

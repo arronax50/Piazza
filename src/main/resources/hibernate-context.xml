@@ -28,8 +28,15 @@
                 <prop key="connection.is-connection-validation-required">true</prop>
             </props>
         </property>
-         <property name="packagesToScan">
-            <value>com.gardin.piazza.domain</value>
+        <property name="packagesToScan">
+            <list>
+                <value>com.gardin.piazza.domain.conferences</value>
+                <value>com.gardin.piazza.domain.forums</value>
+                <value>com.gardin.piazza.domain.notifications</value>
+                <value>com.gardin.piazza.domain.papers</value>
+                <value>com.gardin.piazza.domain.reviews</value>
+                <value>com.gardin.piazza.domain.users</value>
+            </list>
         </property>
     </bean>
 
