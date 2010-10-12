@@ -19,12 +19,12 @@ import javax.persistence.Table;
 @Table(name = "paper")
 public class Paper {
 
+    @Column(name = "content")
+    private Blob content;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
-    @Column(name = "content")
-    private Blob content;
 
     /**
      * Comma-separated list of keywords.

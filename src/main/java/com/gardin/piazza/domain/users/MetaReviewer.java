@@ -20,11 +20,11 @@ public final class MetaReviewer extends User {
     @OneToMany
     private Set<Paper> managedPapers;
 
-    public void setManagedPapers(Set<Paper> managedPapers) {
-        this.managedPapers = managedPapers;
-    }
-
     public Set<Paper> getManagedPapers() {
         return managedPapers;
+    }
+
+    public void setManagedPapers(Set<Paper> managedPapers) {
+        this.managedPapers = managedPapers;
     }
 }

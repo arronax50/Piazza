@@ -22,16 +22,20 @@ import javax.persistence.Table;
 @Table(name = "abstract")
 public class Abstract {
 
+    @Column(name = "execution_datetime", nullable = false)
+    private Blob content;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "Paper_id", nullable = false)
+    @JoinColumn(name = "paper_id", nullable = false)
     private Paper paper;
 
-    @Column(name = "execution_datetime", nullable = false)
-    private Blob content;
+    public Blob getContent() {
+        return content;
+    }
 
     /**
      * 
@@ -39,10 +43,6 @@ public class Abstract {
      */
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     /**
@@ -53,10 +53,6 @@ public class Abstract {
         return paper;
     }
 
-    public void setPaper(Paper paper) {
-        this.paper = paper;
-    }
-
     /**
      * 
      * @return the content of this abstract.
@@ -65,7 +61,11 @@ public class Abstract {
         this.content = content;
     }
 
-    public Blob getContent() {
-        return content;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPaper(Paper paper) {
+        this.paper = paper;
     }
 }

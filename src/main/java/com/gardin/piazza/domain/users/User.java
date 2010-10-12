@@ -48,6 +48,10 @@ public class User {
     @JoinColumn(name = "address_id")
     private Address address;
 
+    public Address getAddress() {
+        return address;
+    }
+
     public String getCountry() {
         return country;
     }
@@ -76,6 +80,10 @@ public class User {
         return surname;
     }
 
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     public void setCountry(String country) {
         this.country = country;
     }
@@ -102,13 +110,5 @@ public class User {
 
     public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public Address getAddress() {
-        return address;
     }
 }

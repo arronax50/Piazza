@@ -19,18 +19,22 @@ import javax.persistence.Table;
 @Table(name = "attachment")
 public class Attachment {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-
     @Column(name = "content")
     private String extension;
 
     @Column(name = "content")
     private Blob file;
 
-    public void setId(int id) {
-        this.id = id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    public String getExtension() {
+        return extension;
+    }
+
+    public Blob getFile() {
+        return file;
     }
 
     public int getId() {
@@ -41,16 +45,12 @@ public class Attachment {
         this.extension = extension;
     }
 
-    public String getExtension() {
-        return extension;
-    }
-
     public void setFile(Blob file) {
         this.file = file;
     }
 
-    public Blob getFile() {
-        return file;
+    public void setId(int id) {
+        this.id = id;
     }
 
 }

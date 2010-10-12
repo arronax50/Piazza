@@ -61,12 +61,12 @@ public class Address {
         return id;
     }
 
-    public String getStreetNumber() {
-        return streetNumber;
-    }
-
     public final String getStreet() {
         return street;
+    }
+
+    public String getStreetNumber() {
+        return streetNumber;
     }
 
     public final String getZipCode() {
