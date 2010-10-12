@@ -30,7 +30,7 @@ public class Paper {
      * Comma-separated list of keywords.
      */
     @Column(name = "keywords")
-    private String keywords;
+    private String[] keywords;
 
     @Column(name = "title")
     private String title;
@@ -43,7 +43,7 @@ public class Paper {
         return id;
     }
 
-    public String getKeywords() {
+    public String[] getKeywords() {
         return keywords;
     }
 
@@ -59,7 +59,7 @@ public class Paper {
         this.id = id;
     }
 
-    public void setKeywords(String keywords) {
+    public void setKeywords(String[] keywords) {
         this.keywords = keywords;
     }
 
