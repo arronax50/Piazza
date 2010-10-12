@@ -19,16 +19,12 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
  * @param <T> the domain class
  * @param <ID> the identifier class (implements {@link Serializable})
  */
-public class AbstractHibernateDAO<T, ID extends Serializable> extends HibernateDaoSupport implements
+public abstract class AbstractHibernateDAO<T, ID extends Serializable> extends HibernateDaoSupport implements
         IDAO<T, ID> {
 
     private final Class<T> domainClass;
 
     
-    public final Class<T> getDomainClass() {
-        return domainClass;
-    }
-
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -76,6 +72,10 @@ public class AbstractHibernateDAO<T, ID extends Serializable> extends HibernateD
     @Override
     public T getByID(ID id) {
         return (T) getSession().get(domainClass, id);
+    }
+
+    public final Class<T> getDomainClass() {
+        return domainClass;
     }
 
     @PostConstruct
