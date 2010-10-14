@@ -49,6 +49,11 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+            <plugin>
+            	<groupId>org.mortbay.jetty</groupId>
+            	<artifactId>maven-jetty-plugin</artifactId>
+            	<version>6.1.25</version>
+            </plugin>
         </plugins>
 
     </build>
@@ -202,17 +207,11 @@
 
     <!-- 5. SCM -->
 
-    <!-- <scm> -->
-    <!-- <connection> -->
-    <!-- scm:svn:https://subversion.assembla.com/svn/ptrade/ptrade/ -->
-    <!-- </connection> -->
-    <!-- <developerConnection> -->
-    <!-- scm:svn:https://subversion.assembla.com/svn/ptrade/ptrade/ -->
-    <!-- </developerConnection> -->
-    <!-- <tag>HEAD</tag> -->
-    <!-- <url> -->
-    <!-- scm:svn:https://subversion.assembla.com/svn/ptrade/ptrade/ -->
-    <!-- </url> -->
-    <!--</scm> -->
-
+    <scm>
+        <connection>scm:git:git://github.com/arronax50/Piazza.git</connection>
+        <developerConnection>scm:git:git@github.com:arronax50/Piazza.git</developerConnection>
+        <url>http://github.com/arronax50/Piazza/tree/master</url>
+    </scm>
+    
+    
 </project>
