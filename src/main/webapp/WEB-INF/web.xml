@@ -5,11 +5,37 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
          http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
+
+    <!-- ========================================================== -->
+    <!-- General - -->
+    <!-- ========================================================== -->
+
+    <session-config>
+        <!-- 10 minutes session timeouts by default -->
+        <session-timeout>10</session-timeout>
+    </session-config>
+
+
+    <!-- ========================================================== -->
+    <!-- Context Parameters - -->
+    <!-- ========================================================== -->
+
     <!-- Look for context in the Spring classpath. -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath*:applicationContext.xml</param-value>
     </context-param>
+
+    <!-- Log4j configuration file.. -->
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.xml</param-value>
+    </context-param>
+
+
+    <!-- ========================================================== -->
+    <!-- Servlets - -->
+    <!-- ========================================================== -->
 
     <!-- The front controller is the Spring DispatcherServlet. -->
     <servlet>
@@ -24,15 +50,30 @@
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 
+
+    <!-- ========================================================== -->
+    <!-- Security - -->
+    <!-- ========================================================== -->
+
+    <!-- ========================================================== -->
+    <!-- Error Handler - -->
+    <!-- ========================================================== -->
+
+    <!-- ========================================================== -->
+    <!-- Listeners - -->
+    <!-- ========================================================== -->
+
     <!-- Listener for bootstrapping the WebApplicationContext. -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <!-- ========================================================== -->
+    <!-- Extra MIME types - -->
+    <!-- ========================================================== -->
 
-    <session-config>
-        <!-- 10 minutes session timeouts by default -->
-        <session-timeout>10</session-timeout>
-    </session-config>
+    <!-- ========================================================== -->
+    <!-- Welcome Files - -->
+    <!-- ========================================================== -->
 
 </web-app>
