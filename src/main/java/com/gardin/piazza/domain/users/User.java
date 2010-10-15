@@ -65,7 +65,7 @@ public class User {
         return firstName;
     }
 
-    public int getID() {
+    public int getId() {
         return id;
     }
 
@@ -97,7 +97,7 @@ public class User {
         this.firstName = firstName;
     }
 
-    public void setID(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
