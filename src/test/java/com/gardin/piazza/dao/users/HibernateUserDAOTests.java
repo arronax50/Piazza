@@ -51,7 +51,7 @@ public class HibernateUserDAOTests extends AbstractDBTest {
         address.setBuilding(USER_BUILDING);
         address.setCity(USER_CITY);
         address.setFloor(USER_FLOOR);
-        address.setNumber(USER_STREET_NUMBER);
+        address.setStreetNumber(USER_STREET_NUMBER);
         address.setStreet(USER_STREET);
         address.setZipCode(USER_ZIP_CODE);
 

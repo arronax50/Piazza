@@ -89,12 +89,12 @@ public class Address {
         this.id = id;
     }
 
-    public void setNumber(String number) {
-        this.streetNumber = number;
-    }
-
     public final void setStreet(String street) {
         this.street = street;
+    }
+
+    public void setStreetNumber(String streetnumber) {
+        this.streetNumber = streetnumber;
     }
 
     public final void setZipCode(String zipCode) {
